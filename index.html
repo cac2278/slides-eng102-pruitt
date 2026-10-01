@@ -1,0 +1,135 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<title>ENG 102 — Finding an Op-Ed</title>
+<style>
+:root{--ink:#172033;--muted:#5d687a;--paper:#fbfaf7;--card:#fff;--accent:#5a3f8c;--accent2:#e8e1f5;--line:#d8d5df;--good:#e8f3ec;--warm:#f7edd9}
+*{box-sizing:border-box} html,body{margin:0;background:#111;color:var(--ink);font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
+body{overflow:hidden}.deck{height:100vh;width:100vw;position:relative}.slide{display:none;position:absolute;inset:0;background:var(--paper);padding:5.5vh 6.5vw 7vh;overflow:auto}.slide.active{display:block}
+h1{font-size:clamp(42px,6vw,78px);line-height:1.02;margin:.1em 0 .35em;letter-spacing:-.04em}h2{font-size:clamp(34px,4.2vw,58px);margin:0 0 .55em;letter-spacing:-.03em}h3{font-size:clamp(21px,2vw,30px);margin:.2em 0 .45em}p,li{font-size:clamp(19px,1.75vw,28px);line-height:1.35}.eyebrow{font-weight:800;letter-spacing:.13em;text-transform:uppercase;color:var(--accent);font-size:clamp(14px,1.1vw,18px)}.sub{font-size:clamp(22px,2.2vw,34px);color:var(--muted);max-width:1000px}.big{font-size:clamp(30px,3.4vw,50px);line-height:1.18;font-weight:750}.grid{display:grid;gap:1.25rem}.g2{grid-template-columns:repeat(2,minmax(0,1fr))}.g3{grid-template-columns:repeat(3,minmax(0,1fr))}.card{background:var(--card);border:2px solid var(--line);border-radius:18px;padding:1.25rem 1.4rem;box-shadow:0 8px 24px #0000000a}.card strong{color:var(--accent)}.pill{display:inline-block;background:var(--accent2);padding:.35em .7em;border-radius:999px;font-weight:750;margin:.2em .25em .2em 0}.note{background:var(--warm);border-radius:16px;padding:1rem 1.2rem}.demo{background:var(--ink);color:#fff;border-radius:18px;padding:1rem 1.25rem;font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:clamp(21px,2.1vw,32px)}
+.map{display:grid;grid-template-columns:1fr 1fr;gap:1.2rem}.fourmaps{display:grid;grid-template-columns:1fr 1fr;gap:.8rem}.qmap{border:2px solid var(--line);border-radius:16px;padding:.75rem .85rem;background:#fff}.qmap h3{font-size:clamp(16px,1.3vw,21px);margin:0 0 .45rem;line-height:1.2}.qmap .editable{min-height:54px;margin-top:.35rem;padding:.5rem;font-size:clamp(15px,1.15vw,19px)}.qmap .maplabel{font-size:clamp(13px,.9vw,16px);font-weight:800;color:var(--accent);text-transform:uppercase;letter-spacing:.05em}.yn{display:flex;gap:.6rem;margin-top:.65rem}.yn span{flex:1;text-align:center;border:2px solid var(--accent);border-radius:999px;padding:.32rem .5rem;font-weight:900;font-size:clamp(16px,1.2vw,20px);color:var(--accent)}.closedqs{gap:.65rem}.closedqs .qmap{display:flex;flex-direction:column;justify-content:space-between;min-height:0;padding:.7rem .8rem}.closedqs .qmap h3{font-size:clamp(18px,1.35vw,23px);line-height:1.14;margin:0 0 .3rem}.closedqs .yn{margin-top:.2rem}.closedqs .yn span{padding:.2rem .4rem;font-size:clamp(17px,1.15vw,20px)}.closed-slide{padding-top:4vh}.closed-slide h2{font-size:clamp(30px,3.4vw,48px);margin-bottom:.35em}.closed-slide .closed-note{margin:.65rem 0 0;padding:.65rem 1rem;border-left:6px solid var(--accent);background:var(--accent2);border-radius:0 12px 12px 0;font-size:clamp(19px,1.55vw,25px);line-height:1.25}.concept{border:3px solid var(--accent);border-radius:20px;padding:1rem;background:#fff}.concept label{font-weight:800;font-size:clamp(19px,1.5vw,24px)}.editable{display:block;margin-top:.65rem;min-height:88px;border:2px dashed #aaa3b7;border-radius:12px;padding:.7rem;background:#fdfcff;font-size:clamp(18px,1.45vw,24px);outline:none}.editable:focus{border-color:var(--accent);box-shadow:0 0 0 4px #5a3f8c18}.links{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1rem}.btn{display:flex;align-items:center;justify-content:space-between;gap:1rem;text-decoration:none;color:var(--ink);background:#fff;border:2px solid var(--line);border-radius:16px;padding:1rem 1.2rem;font-size:clamp(20px,1.7vw,28px);font-weight:800}.btn:hover,.btn:focus{border-color:var(--accent);background:#faf7ff}.btn span{color:var(--accent)}.footer{position:absolute;left:6.5vw;right:6.5vw;bottom:2.2vh;display:flex;justify-content:space-between;color:#777;font-size:15px}.progress{height:4px;background:var(--accent);position:absolute;left:0;bottom:0}.tiny{font-size:clamp(15px,1.1vw,18px);color:var(--muted)}.check{font-size:clamp(22px,2vw,31px);line-height:1.5}.center{display:flex;flex-direction:column;justify-content:center;min-height:76vh}.callout{border-left:8px solid var(--accent);padding-left:1.2rem}.kbd{font-family:ui-monospace,monospace;background:#eee;border-radius:6px;padding:.1em .35em}
+.concept-work .big{font-size:clamp(24px,2.6vw,38px);margin:.35em 0 .65em}.concept-work .card{padding:.85rem 1.15rem}.concept-work .card h3{font-size:clamp(19px,1.7vw,26px);margin:.05em 0 .25em}.concept-work .card p{font-size:clamp(17px,1.45vw,23px);margin:.15em 0}.concept-work .note{font-size:clamp(17px,1.45vw,23px);line-height:1.28;margin-top:.8rem;padding:.75rem 1rem}
+@media(max-width:850px){.g2,.g3,.map,.links{grid-template-columns:1fr}.slide{padding:4vh 5vw 8vh}.footer{left:5vw;right:5vw}}
+@media print{body{overflow:visible;background:#fff}.deck{height:auto}.slide{display:block!important;position:relative;min-height:100vh;page-break-after:always}.footer{position:absolute}}
+.editable:empty:before{content:attr(data-placeholder);color:#8a8792;font-style:italic;font-weight:500}.fourmaps .qmap .editable{min-height:92px;margin-top:10px}
+.demo-slide{padding-top:4.2vh}.demo-slide h2{margin-bottom:.45em}.tested-demo{margin:1rem 0;padding:1rem 1.25rem;border-color:var(--accent)}.tested-demo h3{margin:.2rem 0 .55rem}.tested-demo p{font-size:clamp(17px,1.35vw,22px);margin:.45rem 0}.tested-demo .demo{padding:.7rem 1rem;font-size:clamp(20px,1.8vw,28px)}.tested-badge{display:inline-block;background:var(--good);border-radius:999px;padding:.3rem .65rem;font-weight:900;font-size:clamp(13px,.9vw,16px);letter-spacing:.04em}.demo-bottom{margin-top:.8rem}.demo-slide .btn{padding:.75rem 1rem;font-size:clamp(18px,1.45vw,24px)}
+/* Slide 7 only: compact four-search layout so all content stays above the footer */
+.search-four{padding-top:3.2vh;padding-bottom:8vh;overflow:hidden}
+.search-four h2{font-size:clamp(28px,3.2vw,44px);margin-bottom:.28em}
+.search-four .sub{font-size:clamp(17px,1.55vw,24px);line-height:1.22;margin-top:0!important;margin-bottom:.55rem!important}
+.search-four .grid{gap:.55rem!important}
+.search-four .card{padding:.58rem .72rem!important;gap:.28rem!important;border-radius:14px}
+.search-four .card h3{font-size:clamp(15px,1.12vw,19px);line-height:1.14;margin:0}
+.search-four .demo{font-size:clamp(13px,1.05vw,17px)!important;line-height:1.18;padding:.42rem .55rem!important;border-radius:10px;overflow-wrap:anywhere}
+.search-four .btn{font-size:clamp(12px,.9vw,15px)!important;padding:.32rem .55rem!important;border-radius:10px}
+.search-four .tiny{font-size:clamp(12px,.9vw,15px);line-height:1.18;margin:.45rem 0 0!important}
+
+/* Slide 8 only: compact access layout to keep Research@UWW clear of footer */
+.access-slide{padding-top:3.4vh;padding-bottom:9vh;overflow:hidden}
+.access-slide h2{font-size:clamp(27px,3.05vw,43px);margin-bottom:.38em}
+.access-slide .grid{gap:.65rem!important}
+.access-slide .card{padding:.65rem .85rem!important;border-radius:14px}
+.access-slide .card h3{font-size:clamp(17px,1.45vw,23px);margin:.05em 0 .28em}
+.access-slide .card p{font-size:clamp(14px,1.12vw,18px);line-height:1.25;margin:.25rem 0}
+.access-slide .card .tiny{font-size:clamp(12px,.92vw,15px);line-height:1.2}
+.access-slide .links{gap:.5rem!important}
+.access-slide .btn{font-size:clamp(13px,1vw,17px)!important;padding:.42rem .65rem!important;border-radius:11px}
+.access-slide > .card{margin-top:.6rem!important}
+.access-slide > .tiny{font-size:clamp(11px,.86vw,14px);line-height:1.15;margin-top:.45rem!important}
+</style>
+</head>
+<body>
+<div class="deck" id="deck">
+<section class="slide active">
+<div class="center"><div class="eyebrow">ENG 102 · Research Workshop</div><h1>Find an op-ed.<br/>Learn how to search.</h1><p class="sub">Today: turn your research question into searchable concepts, find one useful op-ed, and use it to push your question further.</p></div>
+</section><section class="slide">
+<div class="eyebrow">Your eventual LibGuide</div><h2>You’re building a mix of voices.</h2>
+<div class="g3 grid"><div class="card"><h3>Public argument</h3><p><strong>2 op-eds</strong><br/><strong>2 magazine articles</strong></p></div><div class="card"><h3>Scholarly conversation</h3><p><strong>2 peer-reviewed articles</strong></p></div><div class="card"><h3>Depth</h3><p><strong>1 recent monograph chapter</strong><br/><strong>1 edited-book chapter</strong></p></div></div>
+<p class="sub">Today we’re concentrating on the first piece: <strong>finding an op-ed.</strong></p>
+</section><section class="slide closed-slide">
+<div class="eyebrow">You already chose your starting question</div><h2>These questions give us a starting position.</h2>
+<div class="fourmaps closedqs">
+<div class="qmap"><h3>A · Do the reading habits of people in leadership positions improve their leadership skills?</h3><div class="yn"><span>YES</span><span>NO</span></div></div>
+<div class="qmap"><h3>B · Do creative writing strategies help academic writers make both rational and persuasive arguments?</h3><div class="yn"><span>YES</span><span>NO</span></div></div>
+<div class="qmap"><h3>C · Do writing assignments in college science classes prepare students to write in their science careers?</h3><div class="yn"><span>YES</span><span>NO</span></div></div>
+<div class="qmap"><h3>D · Does reading written class notes help students prepare for exams?</h3><div class="yn"><span>YES</span><span>NO</span></div></div>
+</div>
+<p class="closed-note"><strong>Yes/no is only the beginning.</strong> Research lets us ask: <strong>How? Why? When? For whom? Under what conditions?</strong></p>
+</section><section class="slide">
+<div class="eyebrow">Why are op-eds hard to find?</div>
+<h2>Op-eds have an identity problem.</h2>
+<p class="big">Different newspapers—and different databases—may use different labels for opinion writing.</p>
+<div class="g3 grid" style="margin-top:1.2rem;">
+<div class="card" style="text-align:center;"><h3>Guest Essay</h3></div>
+<div class="card" style="text-align:center;"><h3>Guest Opinion</h3></div>
+<div class="card" style="text-align:center;"><h3>Opinion</h3></div>
+<div class="card" style="text-align:center;"><h3>Op-Ed</h3></div>
+<div class="card" style="text-align:center;"><h3>Commentary</h3></div>
+<div class="card" style="text-align:center;"><h3>Column</h3></div>
+</div>
+<div class="callout" style="margin-top:1.2rem;">
+<strong>Don’t rely on the label alone.</strong> Look for a <strong>named author</strong> making an <strong>argument</strong> and supporting it with reasons or evidence.
+&#x20;&#x20;</div>
+<p style="margin-top:.85rem;"><strong>Watch out:</strong> an <strong>Editorial</strong> usually represents the newspaper or editorial board; a <strong>Letter to the Editor</strong> is a reader response.</p>
+</section><section class="slide">
+<div class="eyebrow">Before we search</div><h2>Generate possibilities first.</h2>
+<p class="big">Use your <strong>Concept Builder</strong> worksheet with the research question you already chose.</p>
+<div class="g2 grid"><div class="card"><h3>Generate</h3><p><strong>Word 8s → Association Chain → Flip It → Borrow a Brain</strong></p></div><div class="card"><h3>Then notice</h3><p>Move promising words into <strong>Make Connections</strong>. Draw links, circles, arrows, or stars to show what you notice.</p></div></div>
+<p class="callout"><strong>No searching yet.</strong> Right now, the goal is more possibilities and more vocabulary.</p>
+<div style="margin-top:.45rem;"><a href="https://nsdr.co/focus" rel="noopener" target="_blank" style="display:inline-block;text-decoration:none;color:#5a3f8c;font-size:14px;font-weight:800;border:1px solid #d8d1e4;border-radius:999px;padding:.22rem .55rem;background:#fff;">🎧 music ↗</a></div>
+</section><section class="slide">
+<div class="eyebrow">Regroup</div><h2>Let’s build a class vocabulary bank.</h2>
+<div class="fourmaps">
+<div class="qmap"><h3>A · Do the reading habits of people in leadership positions improve their leadership skills?</h3><div class="editable" contenteditable="true" data-placeholder="Student-generated words, phrases + connections…"></div></div>
+<div class="qmap"><h3>B · Do creative writing strategies help academic writers make both rational and persuasive arguments?</h3><div class="editable" contenteditable="true" data-placeholder="Student-generated words, phrases + connections…"></div></div>
+<div class="qmap"><h3>C · Do writing assignments in college science classes prepare students to write in their science careers?</h3><div class="editable" contenteditable="true" data-placeholder="Student-generated words, phrases + connections…"></div></div>
+<div class="qmap"><h3>D · Does reading written class notes help students prepare for exams?</h3><div class="editable" contenteditable="true" data-placeholder="Student-generated words, phrases + connections…"></div></div>
+</div>
+<p class="tiny">What did your worksheets generate? I’ll capture your words and phrases here. <strong>You decide what belongs in each bank.</strong></p>
+</section><section class="slide demo-slide search-four">
+<div class="eyebrow">Live demo</div><h2>Four questions. Four ways into the search.</h2>
+<p class="sub" style="margin-top:-.5rem;margin-bottom:1rem;">Notice what we <strong>didn’t</strong> search: the whole research question. We translated each question into searchable concepts.</p>
+<div class="grid g2" style="gap:.9rem;"><div class="card" style="padding:1rem 1.1rem;display:flex;flex-direction:column;gap:.45rem;">
+<h3 style="margin:0;">A · Do the reading habits of people in leadership positions improve their leadership skills?</h3>
+<div class="demo" style="font-size:clamp(17px,1.45vw,23px);padding:.7rem .85rem;">site:nytimes.com reading habits AND leaders</div>
+<a class="btn" href="https://www.google.com/search?q=site%3Anytimes.com+reading+habits+AND+leaders" rel="noopener" target="_blank" style="align-self:flex-start;font-size:clamp(15px,1.2vw,19px);padding:.5rem .8rem;">RUN SEARCH <span>↗</span></a>
+</div><div class="card" style="padding:1rem 1.1rem;display:flex;flex-direction:column;gap:.45rem;">
+<h3 style="margin:0;">B · Do creative writing strategies help academic writers make both rational and persuasive arguments?</h3>
+<div class="demo" style="font-size:clamp(17px,1.45vw,23px);padding:.7rem .85rem;">site:nytimes.com &quot;creative writing&quot; AND logic</div>
+<a class="btn" href="https://www.google.com/search?q=site%3Anytimes.com+%22creative+writing%22+AND+logic" rel="noopener" target="_blank" style="align-self:flex-start;font-size:clamp(15px,1.2vw,19px);padding:.5rem .8rem;">RUN SEARCH <span>↗</span></a>
+</div><div class="card" style="padding:1rem 1.1rem;display:flex;flex-direction:column;gap:.45rem;">
+<h3 style="margin:0;">C · Do writing assignments in college science classes prepare students to write in their science careers?</h3>
+<div class="demo" style="font-size:clamp(17px,1.45vw,23px);padding:.7rem .85rem;">site:nytimes.com university AND &quot;writing assignments&quot; AND science</div>
+<a class="btn" href="https://www.google.com/search?q=site%3Anytimes.com+university+AND+%22writing+assignments%22+AND+science" rel="noopener" target="_blank" style="align-self:flex-start;font-size:clamp(15px,1.2vw,19px);padding:.5rem .8rem;">RUN SEARCH <span>↗</span></a>
+</div><div class="card" style="padding:1rem 1.1rem;display:flex;flex-direction:column;gap:.45rem;">
+<h3 style="margin:0;">D · Does reading written class notes help students prepare for exams?</h3>
+<div class="demo" style="font-size:clamp(17px,1.45vw,23px);padding:.7rem .85rem;">site:nytimes.com handwriting AND study</div>
+<a class="btn" href="https://www.google.com/search?q=site%3Anytimes.com+handwriting+AND+study" rel="noopener" target="_blank" style="align-self:flex-start;font-size:clamp(15px,1.2vw,19px);padding:.5rem .8rem;">RUN SEARCH <span>↗</span></a>
+</div></div>
+<p class="tiny" style="margin-top:.8rem;"><strong>Watch the decisions:</strong> choose vocabulary → search → scan results → revise when needed.</p>
+</section><section class="slide access-slide">
+<div class="eyebrow">From discovery to access</div><h2>Found it on the web? Get the full text through the library.</h2>
+<div class="g2 grid" style="gap:1rem;">
+<div class="card" style="padding:1rem 1.15rem;"><h3>Found a New York Times article?</h3><p>Go to the library’s <a href="https://libguides.uww.edu/az.php?q=New%20York%20Times%20Current" target="_blank" rel="noopener"><strong>New York Times Current</strong> ↗</a> database and search the <strong>article title</strong> to retrieve the full text.</p><p class="tiny"><strong>Tip:</strong> Google can help you discover it. The library can help you access it.</p></div>
+<div class="card" style="padding:1rem 1.15rem;"><h3>Other newspaper options</h3><p style="line-height:1.8;"><a href="https://libguides.uww.edu/az.php?q=Wall%20Street%20Journal%20Current" target="_blank" rel="noopener"><strong>Wall Street Journal Current</strong> ↗</a><br/><a href="https://libguides.uww.edu/az.php?q=Access%20World%20News" target="_blank" rel="noopener"><strong>Access World News / NewsBank</strong> ↗</a><br/><a href="https://libguides.uww.edu/az.php?q=Gale%20OneFile%3A%20News" target="_blank" rel="noopener"><strong>Gale OneFile: News</strong> ↗</a><br/><a href="https://libguides.uww.edu/az.php?q=US%20Newsstream" target="_blank" rel="noopener"><strong>US Newsstream</strong> ↗</a><br/><a href="https://libguides.uww.edu/az/databases?t=19166" target="_blank" rel="noopener"><strong>All UWW newspaper databases</strong> ↗</a></p><p class="tiny">More places to look for opinion, commentary, columns, and other newspaper writing.</p></div>
+</div>
+<div class="card" style="margin-top:1rem;padding:1rem 1.15rem;"><h3>Want to search more broadly? Try Research@UWW.</h3><p style="margin:.35rem 0 .7rem;">Research@UWW searches across many library resources at once. Start with the <strong>keywords you developed today</strong>, then scan, filter, and revise.<br/><strong>Advanced Search:</strong> Filters → Material Type: <strong>Newspapers</strong> → Date: <strong>Last 5 years</strong>.</p><div class="links" style="gap:.75rem;"><a class="btn" href="https://www.uww.edu/library/" rel="noopener" target="_blank" style="font-size:clamp(16px,1.3vw,21px);padding:.65rem .9rem;">OPEN LIBRARY WEBSITE <span>↗</span></a><a class="btn" href="https://libguides.uww.edu/directlink" rel="noopener" target="_blank" style="font-size:clamp(16px,1.3vw,21px);padding:.65rem .9rem;">OPEN RESEARCH@UWW <span>↗</span></a></div></div>
+<p class="tiny" style="margin-top:.8rem;"><strong>Workflow:</strong> WEB → discover an article &nbsp;·&nbsp; NEWSPAPER DATABASE → retrieve full text &nbsp;·&nbsp; RESEARCH@UWW → search broadly</p>
+</section><section class="slide">
+<div class="eyebrow">Once you find it</div><h2>Don’t stop at the citation.</h2>
+<div class="g3 grid"><div class="card"><h3>Capture it</h3><p>Record the <a href="https://wisconsin-uww.primo.exlibrisgroup.com/permalink/01UWI_WW/47dbmu/cdi_proquest_miscellaneous_2705905138" target="_blank" rel="noopener"><strong>MLA citation ↗</strong></a>.</p></div><div class="card"><h3>Read the argument</h3><p>What is the writer’s <strong>core claim</strong>? What <strong>evidence</strong> do they use?</p></div><div class="card"><h3>Push further</h3><p>What does this article leave unanswered, complicate, or make you wonder?</p></div></div>
+<p class="big callout">That new question becomes a path into the rest of your research.</p>
+</section><section class="slide">
+<div class="center"><div class="eyebrow">Research time</div><h1>Your goal before you leave:</h1><p class="big">Find a usable op-ed and know what you want to investigate next.</p><p class="sub">The handout has the search reminders, database options, source-type guide, and Homework #1 checklist—so you don’t have to memorize any of this.</p></div>
+</section></div>
+<script>
+const slides=[...document.querySelectorAll('.slide')];let i=0;
+function show(n){i=Math.max(0,Math.min(slides.length-1,n));slides.forEach((s,j)=>s.classList.toggle('active',j===i));document.querySelectorAll('.footer').forEach(x=>x.remove());slides.forEach((s,j)=>{const f=document.createElement('div');f.className='footer';f.innerHTML=`<span>ENG 102 · Research Workshop</span><span>${j+1} / ${slides.length}</span><div class="progress" style="width:${((j+1)/slides.length)*100}%"></div>`;s.appendChild(f)});}
+document.addEventListener('keydown',e=>{if(e.target && e.target.isContentEditable)return;if(['ArrowRight','PageDown',' ','Enter'].includes(e.key)){e.preventDefault();show(i+1)}if(['ArrowLeft','PageUp','Backspace'].includes(e.key)){e.preventDefault();show(i-1)}if(e.key==='Home')show(0);if(e.key==='End')show(slides.length-1);});
+document.addEventListener('click',e=>{if(e.target.closest('a')||e.target.isContentEditable)return;const x=e.clientX/window.innerWidth;if(x>.82)show(i+1);else if(x<.18)show(i-1)});
+show(0);
+</script>
+</body></html>
